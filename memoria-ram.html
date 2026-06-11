@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Memória RAM — CoreVault</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="logo">
+        <div class="logo-icon">
+          <svg viewBox="0 0 18 18" fill="none"><rect x="2" y="2" width="6" height="6" rx="1.5" fill="white"/><rect x="10" y="2" width="6" height="6" rx="1.5" fill="white" opacity="0.6"/><rect x="2" y="10" width="6" height="6" rx="1.5" fill="white" opacity="0.6"/><rect x="10" y="10" width="6" height="6" rx="1.5" fill="white" opacity="0.3"/></svg>
+        </div>
+        CoreVault
+      </a>
+      <button class="hamburger-btn" id="hamburger-btn" aria-label="Abrir menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="site-nav">
+        <a href="index.html">Início</a>
+        <a href="processadores.html">Processadores</a>
+        <a href="placa-video.html">Placas de Vídeo</a>
+        <a href="memoria-ram.html" class="active">Memória RAM</a>
+      </nav>
+      <div class="header-actions">
+        <a href="login.html" class="login-btn">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          Entrar
+        </a>
+        <button class="cart-btn" id="cart-btn">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+          Carrinho
+          <span class="cart-count hidden">0</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="page-header">
+    <div class="page-header-inner">
+      <div class="breadcrumb">
+        <a href="index.html">Início</a>
+        <span>›</span>
+        <span>Memória RAM</span>
+      </div>
+      <h1>Memória RAM</h1>
+      <p>DDR4 e DDR5 para uso cotidiano, games e estações de trabalho.</p>
+    </div>
+  </div>
+
+  <main class="section">
+    <div class="products-grid">
+
+      <div class="product-card">
+        <div class="product-image">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="20" height="12" rx="2"/><line x1="6" y1="10" x2="6" y2="14"/><line x1="9" y1="10" x2="9" y2="14"/><line x1="12" y1="10" x2="12" y2="14"/><line x1="15" y1="10" x2="15" y2="14"/><line x1="18" y1="10" x2="18" y2="14"/></svg>
+        </div>
+        <div class="product-body">
+          <div class="product-brand">Kingston</div>
+          <div class="product-name">ValueRAM 8 GB DDR4</div>
+          <div class="product-desc">Ideal para uso básico, estudo e navegação. Compatível com a maioria dos desktops.</div>
+          <div class="product-specs">
+            <span class="spec-tag">DDR4-3200</span>
+            <span class="spec-tag">CL22</span>
+            <span class="spec-tag">1.35V</span>
+          </div>
+        </div>
+        <div class="product-footer">
+          <div class="product-price">
+            <span class="price-value">R$ 149,00</span>
+          </div>
+          <button class="btn-comprar" onclick="openModal({id:'kvr8ddr4',name:'Kingston ValueRAM 8GB DDR4',price:149,icon:ramSVG()})">+ Carrinho</button>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-image">
+          <span class="product-badge badge-popular">Mais vendida</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="20" height="12" rx="2"/><line x1="6" y1="10" x2="6" y2="14"/><line x1="9" y1="10" x2="9" y2="14"/><line x1="12" y1="10" x2="12" y2="14"/><line x1="15" y1="10" x2="15" y2="14"/><line x1="18" y1="10" x2="18" y2="14"/></svg>
+        </div>
+        <div class="product-body">
+          <div class="product-brand">Corsair</div>
+          <div class="product-name">Vengeance 16 GB DDR4</div>
+          <div class="product-desc">Perfeito para jogos e uso gráfico. Kit 2×8 GB com perfil XMP 2.0.</div>
+          <div class="product-specs">
+            <span class="spec-tag">DDR4-3600</span>
+            <span class="spec-tag">CL18</span>
+            <span class="spec-tag">XMP 2.0</span>
+          </div>
+        </div>
+        <div class="product-footer">
+          <div class="product-price">
+            <span class="price-value">R$ 319,00</span>
+          </div>
+          <button class="btn-comprar" onclick="openModal({id:'corsair16ddr4',name:'Corsair Vengeance 16GB DDR4',price:319,icon:ramSVG()})">+ Carrinho</button>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-image">
+          <span class="product-badge badge-new">Novo</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="20" height="12" rx="2"/><line x1="6" y1="10" x2="6" y2="14"/><line x1="9" y1="10" x2="9" y2="14"/><line x1="12" y1="10" x2="12" y2="14"/><line x1="15" y1="10" x2="15" y2="14"/><line x1="18" y1="10" x2="18" y2="14"/></svg>
+          <img src="Ram-FuryBeast.png" alt="Kingston Fury Beast 32GB DDR5" class="product-img">
+        </div>
+        <div class="product-body">
+          <div class="product-brand">Kingston</div>
+          <div class="product-name">Fury Beast 32 GB DDR5</div>
+          <div class="product-desc">Para quem quer o que há de mais recente. Kit 2×16 GB DDR5 para plataformas AM5 e LGA1700.</div>
+          <div class="product-specs">
+            <span class="spec-tag">DDR5-5200</span>
+            <span class="spec-tag">CL40</span>
+            <span class="spec-tag">XMP 3.0</span>
+          </div>
+        </div>
+        <div class="product-footer">
+          <div class="product-price">
+            <span class="price-value">R$ 649,00</span>
+          </div>
+          <button class="btn-comprar" onclick="openModal({id:'fury32ddr5',name:'Kingston Fury Beast 32GB DDR5',price:649,icon:ramSVG()})">+ Carrinho</button>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="logo">
+          <div class="logo-icon"><svg viewBox="0 0 18 18" fill="none"><rect x="2" y="2" width="6" height="6" rx="1.5" fill="white"/><rect x="10" y="2" width="6" height="6" rx="1.5" fill="white" opacity="0.6"/><rect x="2" y="10" width="6" height="6" rx="1.5" fill="white" opacity="0.6"/><rect x="10" y="10" width="6" height="6" rx="1.5" fill="white" opacity="0.3"/></svg></div>
+          CoreVault
+        </div>
+        <p>Hardware de qualidade para montar, evoluir e dominar.</p>
+      </div>
+      <div class="footer-links">
+        <h4>Produtos</h4>
+        <ul>
+          <li><a href="processadores.html">Processadores</a></li>
+          <li><a href="placa-video.html">Placas de Vídeo</a></li>
+          <li><a href="memoria-ram.html">Memória RAM</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 CoreVault. Todos os direitos reservados.</span>
+      <span>Loja fictícia para fins acadêmicos.</span>
+    </div>
+  </footer>
+
+  <div class="modal-overlay" id="modal-overlay">
+    <div class="modal">
+      <div class="modal-header">
+        <div>
+          <div class="modal-title">Adicionar ao carrinho</div>
+          <div class="modal-subtitle">Confirme a quantidade</div>
+        </div>
+        <button class="modal-close" id="modal-close-btn">✕</button>
+      </div>
+      <div class="modal-product">
+        <div class="modal-product-icon" id="modal-icon"></div>
+        <div>
+          <div class="modal-product-name" id="modal-product-name">—</div>
+          <div class="modal-product-price" id="modal-product-price">—</div>
+        </div>
+      </div>
+      <div class="modal-qty">
+        <label>Quantidade</label>
+        <div class="qty-controls">
+          <button class="qty-btn" id="qty-minus">−</button>
+          <div class="qty-value" id="modal-qty-value">1</div>
+          <button class="qty-btn" id="qty-plus">+</button>
+        </div>
+      </div>
+      <div class="modal-actions">
+        <button class="btn-secondary" onclick="closeModal()">Cancelar</button>
+        <button class="btn-primary" id="modal-confirm-btn">Confirmar</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="cart-overlay" id="cart-overlay"></div>
+  <div class="cart-sidebar" id="cart-sidebar">
+    <div class="cart-sidebar-header">
+      <h2>Carrinho</h2>
+      <button class="modal-close" id="cart-close-btn">✕</button>
+    </div>
+    <div class="cart-items" id="cart-items-list"><div class="cart-empty">Seu carrinho está vazio.</div></div>
+    <div class="cart-footer">
+      <div class="cart-total"><span>Total</span><span id="cart-total-value">R$ 0,00</span></div>
+      <button class="btn-primary" style="justify-content:center;" onclick="window.location.href='login.html'">Finalizar compra</button>
+    </div>
+  </div>
+
+  <div class="toast" id="toast"><span class="toast-icon">✓</span><span class="toast-msg"></span></div>
+
+  <script src="cart.js"></script>
+  <script src="filter.js"></script>
+  <script>
+    function ramSVG() {
+      return `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="20" height="12" rx="2"/><line x1="6" y1="10" x2="6" y2="14"/><line x1="9" y1="10" x2="9" y2="14"/><line x1="12" y1="10" x2="12" y2="14"/><line x1="15" y1="10" x2="15" y2="14"/><line x1="18" y1="10" x2="18" y2="14"/></svg>`;
+    }
+  </script>
+  <script src="auth.js"></script>
+</body>
+</html>

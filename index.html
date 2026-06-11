@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CoreVault — Loja de Hardware</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="logo">
+        <div class="logo-icon">
+          <svg viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="2" y="2" width="6" height="6" rx="1.5" fill="white"/>
+            <rect x="10" y="2" width="6" height="6" rx="1.5" fill="white" opacity="0.6"/>
+            <rect x="2" y="10" width="6" height="6" rx="1.5" fill="white" opacity="0.6"/>
+            <rect x="10" y="10" width="6" height="6" rx="1.5" fill="white" opacity="0.3"/>
+          </svg>
+        </div>
+        CoreVault
+      </a>
+      <button class="hamburger-btn" id="hamburger-btn" aria-label="Abrir menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="site-nav">
+        <a href="index.html" class="active">Início</a>
+        <a href="processadores.html">Processadores</a>
+        <a href="placa-video.html">Placas de Vídeo</a>
+        <a href="memoria-ram.html">Memória RAM</a>
+      </nav>
+      <div class="header-actions">
+        <a href="login.html" class="login-btn">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          Entrar
+        </a>
+        <button class="cart-btn" id="cart-btn">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/>
+            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/>
+          </svg>
+          Carrinho
+          <span class="cart-count hidden" id="cart-count-header">0</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-eyebrow">
+      <svg width="10" height="10" viewBox="0 0 10 10" fill="currentColor"><circle cx="5" cy="5" r="5"/></svg>
+      Hardware de alto desempenho
+    </div>
+    <h1>As melhores peças para <em>montar o seu PC</em></h1>
+    <p>Processadores, placas de vídeo e memória RAM com garantia e entrega rápida para todo o Brasil.</p>
+    <div class="hero-actions">
+      <a href="processadores.html" class="btn-primary">
+        Ver produtos
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+      <a href="#por-que" class="btn-secondary">Saiba mais</a>
+    </div>
+  </section>
+
+  <!-- CATEGORIAS -->
+  <div class="section">
+    <div class="section-header">
+      <div>
+        <h2 class="section-title">Categorias</h2>
+        <p class="section-subtitle">Navegue por tipo de componente</p>
+      </div>
+    </div>
+    <div class="categories-grid">
+      <a href="processadores.html" class="category-card">
+        <div class="category-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="4" y="4" width="16" height="16" rx="2"/>
+            <rect x="9" y="9" width="6" height="6"/>
+            <line x1="9" y1="2" x2="9" y2="4"/><line x1="12" y1="2" x2="12" y2="4"/><line x1="15" y1="2" x2="15" y2="4"/>
+            <line x1="9" y1="20" x2="9" y2="22"/><line x1="12" y1="20" x2="12" y2="22"/><line x1="15" y1="20" x2="15" y2="22"/>
+            <line x1="20" y1="9" x2="22" y2="9"/><line x1="20" y1="12" x2="22" y2="12"/><line x1="20" y1="15" x2="22" y2="15"/>
+            <line x1="2" y1="9" x2="4" y2="9"/><line x1="2" y1="12" x2="4" y2="12"/><line x1="2" y1="15" x2="4" y2="15"/>
+          </svg>
+        </div>
+        <h3>Processadores</h3>
+        <p>Intel e AMD para todos os perfis — do uso cotidiano ao processamento pesado.</p>
+        <div class="category-arrow">Ver produtos →</div>
+      </a>
+
+      <a href="placa-video.html" class="category-card">
+        <div class="category-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="7" width="20" height="11" rx="2"/>
+            <path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/>
+            <circle cx="8" cy="12" r="1.5"/><circle cx="16" cy="12" r="1.5"/>
+            <line x1="6" y1="18" x2="6" y2="21"/><line x1="18" y1="18" x2="18" y2="21"/>
+          </svg>
+        </div>
+        <h3>Placas de Vídeo</h3>
+        <p>NVIDIA e AMD para games, design e modelagem 3D em Full HD e além.</p>
+        <div class="category-arrow">Ver produtos →</div>
+      </a>
+
+      <a href="memoria-ram.html" class="category-card">
+        <div class="category-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="6" width="20" height="12" rx="2"/>
+            <line x1="6" y1="10" x2="6" y2="14"/><line x1="9" y1="10" x2="9" y2="14"/>
+            <line x1="12" y1="10" x2="12" y2="14"/><line x1="15" y1="10" x2="15" y2="14"/>
+            <line x1="18" y1="10" x2="18" y2="14"/>
+          </svg>
+        </div>
+        <h3>Memória RAM</h3>
+        <p>DDR4 e DDR5 de 8 GB a 64 GB para multitarefa e alto desempenho.</p>
+        <div class="category-arrow">Ver produtos →</div>
+      </a>
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <!-- DESTAQUES / PROMOÇÕES -->
+  <div class="section">
+    <div class="section-header">
+      <div>
+        <h2 class="section-title">Destaques da semana</h2>
+        <p class="section-subtitle">Ofertas selecionadas com preços especiais</p>
+      </div>
+      <a href="processadores.html" class="section-link">Ver todos →</a>
+    </div>
+    <div class="promo-grid">
+
+      <div class="product-card">
+        <div class="product-image">
+          <span class="product-badge badge-sale">Promoção</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="4" y="4" width="16" height="16" rx="2"/>
+            <rect x="9" y="9" width="6" height="6"/>
+            <line x1="9" y1="2" x2="9" y2="4"/><line x1="12" y1="2" x2="12" y2="4"/><line x1="15" y1="2" x2="15" y2="4"/>
+            <line x1="9" y1="20" x2="9" y2="22"/><line x1="12" y1="20" x2="12" y2="22"/><line x1="15" y1="20" x2="15" y2="22"/>
+            <line x1="20" y1="9" x2="22" y2="9"/><line x1="20" y1="12" x2="22" y2="12"/><line x1="20" y1="15" x2="22" y2="15"/>
+            <line x1="2" y1="9" x2="4" y2="9"/><line x1="2" y1="12" x2="4" y2="12"/><line x1="2" y1="15" x2="4" y2="15"/>
+          </svg>
+          <img src="processador-core-i5.jpeg" alt="Intel Core i5-13400F" class="product-img">
+        </div>
+        <div class="product-body">
+          <div class="product-brand">Intel</div>
+          <div class="product-name">Core i5-13400F</div>
+          <div class="product-desc">10 núcleos, 16 threads. Excelente para jogos e produtividade.</div>
+          <div class="product-specs">
+            <span class="spec-tag">10 núcleos</span>
+            <span class="spec-tag">LGA1700</span>
+            <span class="spec-tag">65W TDP</span>
+          </div>
+        </div>
+        <div class="product-footer">
+          <div class="product-price">
+            <span class="price-old">R$ 1.099,00</span>
+            <span class="price-value">R$ 879,00</span>
+          </div>
+          <button class="btn-comprar" onclick="openModal({id:'i5-13400f',name:'Intel Core i5-13400F',price:879,icon:cpuIconSVG()})">
+            + Carrinho
+          </button>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-image">
+          <span class="product-badge badge-popular">Mais vendido</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="7" width="20" height="11" rx="2"/>
+            <path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/>
+            <circle cx="8" cy="12" r="1.5"/><circle cx="16" cy="12" r="1.5"/>
+            <line x1="6" y1="18" x2="6" y2="21"/><line x1="18" y1="18" x2="18" y2="21"/>
+          </svg>
+          <img src="placa_de_video_gtx.png" alt="RTX 3060" class="product-img">
+        </div>
+        <div class="product-body">
+          <div class="product-brand">NVIDIA</div>
+          <div class="product-name">RTX 3060 12 GB</div>
+          <div class="product-desc">Alta performance em Full HD e 1440p. Ideal para games modernos.</div>
+          <div class="product-specs">
+            <span class="spec-tag">12 GB GDDR6</span>
+            <span class="spec-tag">PCIe 4.0</span>
+            <span class="spec-tag">170W</span>
+          </div>
+        </div>
+        <div class="product-footer">
+          <div class="product-price">
+            <span class="price-value">R$ 1.749,00</span>
+          </div>
+          <button class="btn-comprar" onclick="openModal({id:'rtx3060',name:'NVIDIA RTX 3060 12GB',price:1749,icon:gpuIconSVG()})">
+            + Carrinho
+          </button>
+        </div>
+      </div>
+      <div class="product-card">
+        <div class="product-image">
+          <span class="product-badge badge-new">Novo</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="6" width="20" height="12" rx="2"/>
+            <line x1="6" y1="10" x2="6" y2="14"/><line x1="9" y1="10" x2="9" y2="14"/>
+            <line x1="12" y1="10" x2="12" y2="14"/><line x1="15" y1="10" x2="15" y2="14"/>
+            <line x1="18" y1="10" x2="18" y2="14"/>
+          </svg>
+          <img src="Ram-FuryBeast.png" alt="Fury Beast 32 GB DDR5" class="product-img">
+        </div>
+        <div class="product-body">
+          <div class="product-brand">Kingston</div>
+          <div class="product-name">Fury Beast 32 GB DDR5</div>
+          <div class="product-desc">Kit 2×16 GB DDR5-5200. Para quem quer o que há de mais recente.</div>
+          <div class="product-specs">
+            <span class="spec-tag">DDR5-5200</span>
+            <span class="spec-tag">CL40</span>
+            <span class="spec-tag">2×16 GB</span>
+          </div>
+        </div>
+        <div class="product-footer">
+          <div class="product-price">
+            <span class="price-value">R$ 649,00</span>
+          </div>
+          <button class="btn-comprar" onclick="openModal({id:'fury32ddr5',name:'Kingston Fury Beast 32GB DDR5',price:649,icon:ramIconSVG()})">
+            + Carrinho
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FALE CONOSCO -->
+  <hr class="divider">
+  <div class="section" id="contato">
+    <div class="section-header">
+      <div>
+        <h2 class="section-title">Fale conosco</h2>
+        <p class="section-subtitle">Dúvidas, sugestões ou suporte técnico — estamos aqui.</p>
+      </div>
+    </div>
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:1.5rem; align-items:start;">
+
+      <!-- FORMULÁRIO -->
+      <div style="background:var(--surface); border:1px solid var(--border); border-radius:var(--radius-lg); padding:2rem; display:flex; flex-direction:column; gap:1.25rem;">
+        <div style="display:flex; flex-direction:column; gap:6px;">
+          <label style="font-size:13px; font-weight:500; color:var(--text-2);">Nome</label>
+          <input id="contact-name" type="text" placeholder="Seu nome completo"
+            style="padding:10px 14px; border:1px solid var(--border); border-radius:var(--radius-md); font-family:inherit; font-size:14px; background:var(--bg); color:var(--text); outline:none; transition:border-color 0.2s;"
+            onfocus="this.style.borderColor='var(--border-strong)'" onblur="this.style.borderColor='var(--border)'">
+        </div>
+        <div style="display:flex; flex-direction:column; gap:6px;">
+          <label style="font-size:13px; font-weight:500; color:var(--text-2);">E-mail</label>
+          <input id="contact-email" type="email" placeholder="seu@email.com"
+            style="padding:10px 14px; border:1px solid var(--border); border-radius:var(--radius-md); font-family:inherit; font-size:14px; background:var(--bg); color:var(--text); outline:none; transition:border-color 0.2s;"
+            onfocus="this.style.borderColor='var(--border-strong)'" onblur="this.style.borderColor='var(--border)'">
+        </div>
+        <div style="display:flex; flex-direction:column; gap:6px;">
+          <label style="font-size:13px; font-weight:500; color:var(--text-2);">Mensagem</label>
+          <textarea id="contact-msg" rows="5" placeholder="Como podemos te ajudar?"
+            style="padding:10px 14px; border:1px solid var(--border); border-radius:var(--radius-md); font-family:inherit; font-size:14px; background:var(--bg); color:var(--text); resize:vertical; outline:none; transition:border-color 0.2s; line-height:1.6;"
+            onfocus="this.style.borderColor='var(--border-strong)'" onblur="this.style.borderColor='var(--border)'"></textarea>
+        </div>
+        <button class="btn-primary" style="align-self:flex-start;" onclick="enviarContato()">
+          Enviar mensagem
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+        </button>
+        <p id="contact-feedback" style="font-size:13px; color:var(--green); display:none;">✓ Mensagem enviada! Entraremos em contato em breve.</p>
+      </div>
+
+      <!-- MAPA -->
+      <div style="border:1px solid var(--border); border-radius:var(--radius-lg); overflow:hidden; height:100%; min-height:360px;">
+        <iframe
+          title="Localização CoreVault"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.1952959265!2d-46.65604668910953!3d-23.564611278916354!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59c8da0aa315%3A0xd59f9431f2c9776a!2sAv.%20Paulista%2C%20S%C3%A3o%20Paulo%20-%20SP!5e0!3m2!1spt-BR!2sbr!4v1714000000000!5m2!1spt-BR!2sbr"
+          width="100%"
+          height="100%"
+          style="border:none; display:block; min-height:360px;"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <!-- POR QUE COMPRAR -->
+  <section class="features-section" id="por-que">
+    <div class="section" style="padding-top:0;padding-bottom:0;">
+      <div class="features-grid">
+        <div class="feature-item">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+            </svg>
+          </div>
+          <h3>Garantia de 1 ano.</h3>
+          <p>Todos os produtos têm garantia de um ano contra defeitos de fabricação, com suporte técnico incluso.</p>
+        </div>
+        <div class="feature-item">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="1" y="3" width="15" height="13" rx="1"/>
+              <path d="M16 8h4l3 5v3h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/>
+            </svg>
+          </div>
+          <h3>Entrega rápida e imediata</h3>
+          <p>Enviamos para todo o Brasil. Pedidos feitos após às 14h serão enviados somente no dia útil seguinte.</p>
+        </div>
+        <div class="feature-item">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"/>
+              <path d="M12 8v4l3 3"/>
+            </svg>
+          </div>
+          <h3>Suporte especializado</h3>
+          <p>Nossa equipe de especialistas em hardware está disponível para te ajudar a escolher os componentes certos.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="logo">
+          <div class="logo-icon">
+            <svg viewBox="0 0 18 18" fill="none"><rect x="2" y="2" width="6" height="6" rx="1.5" fill="white"/><rect x="10" y="2" width="6" height="6" rx="1.5" fill="white" opacity="0.6"/><rect x="2" y="10" width="6" height="6" rx="1.5" fill="white" opacity="0.6"/><rect x="10" y="10" width="6" height="6" rx="1.5" fill="white" opacity="0.3"/></svg>
+          </div>
+          CoreVault
+        </div>
+        <p>Hardware de qualidade para montar, evoluir e dominar.</p>
+      </div>
+      <div class="footer-links">
+        <h4>Produtos</h4>
+        <ul>
+          <li><a href="processadores.html">Processadores</a></li>
+          <li><a href="placa-video.html">Placas de Vídeo</a></li>
+          <li><a href="memoria-ram.html">Memória RAM</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h4>Empresa</h4>
+        <ul>
+          <li><a href="#">Sobre nós</a></li>
+          <li><a href="#">Política de troca</a></li>
+          <li><a href="#">Contato</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 CoreVault. Todos os direitos reservados.</span>
+      <span>Loja fictícia para fins acadêmicos.</span>
+    </div>
+  </footer>
+
+  <!-- MODAL -->
+  <div class="modal-overlay" id="modal-overlay">
+    <div class="modal">
+      <div class="modal-header">
+        <div>
+          <div class="modal-title">Adicionar ao carrinho</div>
+          <div class="modal-subtitle">Confirme a quantidade</div>
+        </div>
+        <button class="modal-close" id="modal-close-btn">✕</button>
+      </div>
+      <div class="modal-product">
+        <div class="modal-product-icon" id="modal-icon"></div>
+        <div>
+          <div class="modal-product-name" id="modal-product-name">—</div>
+          <div class="modal-product-price" id="modal-product-price">—</div>
+        </div>
+      </div>
+      <div class="modal-qty">
+        <label>Quantidade</label>
+        <div class="qty-controls">
+          <button class="qty-btn" id="qty-minus">−</button>
+          <div class="qty-value" id="modal-qty-value">1</div>
+          <button class="qty-btn" id="qty-plus">+</button>
+        </div>
+      </div>
+      <div class="modal-actions">
+        <button class="btn-secondary" id="modal-cancel-btn" onclick="closeModal()">Cancelar</button>
+        <button class="btn-primary" id="modal-confirm-btn">Confirmar</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- CARRINHO SIDEBAR -->
+  <div class="cart-overlay" id="cart-overlay"></div>
+  <div class="cart-sidebar" id="cart-sidebar">
+    <div class="cart-sidebar-header">
+      <h2>Carrinho</h2>
+      <button class="modal-close" id="cart-close-btn">✕</button>
+    </div>
+    <div class="cart-items" id="cart-items-list">
+      <div class="cart-empty">Seu carrinho está vazio.</div>
+    </div>
+    <div class="cart-footer">
+      <div class="cart-total">
+        <span>Total</span>
+        <span id="cart-total-value">R$ 0,00</span>
+      </div>
+      <button class="btn-primary" style="justify-content:center;" onclick="window.location.href='login.html'">Finalizar compra</button>
+    </div>
+  </div>
+
+  <!-- TOAST -->
+  <div class="toast" id="toast">
+    <span class="toast-icon">✓</span>
+    <span class="toast-msg"></span>
+  </div>
+
+  <script src="cart.js"></script>
+  <script>
+    function enviarContato() {
+      const nome = document.getElementById('contact-name').value.trim();
+      const email = document.getElementById('contact-email').value.trim();
+      const msg = document.getElementById('contact-msg').value.trim();
+      if (!nome || !email || !msg) {
+        alert('Por favor, preencha todos os campos antes de enviar.');
+        return;
+      }
+      document.getElementById('contact-feedback').style.display = 'block';
+      document.getElementById('contact-name').value = '';
+      document.getElementById('contact-email').value = '';
+      document.getElementById('contact-msg').value = '';
+    }
+    function cpuIconSVG() {
+      return `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><line x1="9" y1="2" x2="9" y2="4"/><line x1="12" y1="2" x2="12" y2="4"/><line x1="15" y1="2" x2="15" y2="4"/><line x1="9" y1="20" x2="9" y2="22"/><line x1="12" y1="20" x2="12" y2="22"/><line x1="15" y1="20" x2="15" y2="22"/><line x1="20" y1="9" x2="22" y2="9"/><line x1="20" y1="12" x2="22" y2="12"/><line x1="20" y1="15" x2="22" y2="15"/><line x1="2" y1="9" x2="4" y2="9"/><line x1="2" y1="12" x2="4" y2="12"/><line x1="2" y1="15" x2="4" y2="15"/></svg>`;
+    }
+    function gpuIconSVG() {
+      return `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="11" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/><circle cx="8" cy="12" r="1.5"/><circle cx="16" cy="12" r="1.5"/><line x1="6" y1="18" x2="6" y2="21"/><line x1="18" y1="18" x2="18" y2="21"/></svg>`;
+    }
+    function ramIconSVG() {
+      return `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="20" height="12" rx="2"/><line x1="6" y1="10" x2="6" y2="14"/><line x1="9" y1="10" x2="9" y2="14"/><line x1="12" y1="10" x2="12" y2="14"/><line x1="15" y1="10" x2="15" y2="14"/><line x1="18" y1="10" x2="18" y2="14"/></svg>`;
+    }
+  </script>
+  <script src="auth.js"></script>
+</body>
+</html>

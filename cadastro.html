@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Criar conta — CoreVault</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="logo">
+        <div class="logo-icon">
+          <svg viewBox="0 0 18 18" fill="none"><rect x="2" y="2" width="6" height="6" rx="1.5" fill="white"/><rect x="10" y="2" width="6" height="6" rx="1.5" fill="white" opacity="0.6"/><rect x="2" y="10" width="6" height="6" rx="1.5" fill="white" opacity="0.6"/><rect x="10" y="10" width="6" height="6" rx="1.5" fill="white" opacity="0.3"/></svg>
+        </div>
+        CoreVault
+      </a>
+      <button class="hamburger-btn" id="hamburger-btn" aria-label="Abrir menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="site-nav">
+        <a href="index.html">Início</a>
+        <a href="processadores.html">Processadores</a>
+        <a href="placa-video.html">Placas de Vídeo</a>
+        <a href="memoria-ram.html">Memória RAM</a>
+      </nav>
+      <div class="header-actions">
+        <a href="login.html" class="login-btn">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          Entrar
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <div style="min-height: calc(100vh - 64px - 100px); display: flex; align-items: center; justify-content: center; padding: 3rem 1rem;">
+    <div style="background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-xl); padding: 2.5rem; width: 100%; max-width: 440px; box-shadow: var(--shadow-md);">
+
+      <div style="text-align: center; margin-bottom: 2rem;">
+        <div class="logo-icon" style="margin: 0 auto 1rem; width: 48px; height: 48px;">
+          <svg viewBox="0 0 18 18" fill="none"><rect x="2" y="2" width="6" height="6" rx="1.5" fill="white"/><rect x="10" y="2" width="6" height="6" rx="1.5" fill="white" opacity="0.6"/><rect x="2" y="10" width="6" height="6" rx="1.5" fill="white" opacity="0.6"/><rect x="10" y="10" width="6" height="6" rx="1.5" fill="white" opacity="0.3"/></svg>
+        </div>
+        <h1 style="font-size: 1.5rem; font-weight: 600; letter-spacing: -0.02em; margin-bottom: 0.25rem;">Criar sua conta</h1>
+        <p style="font-size: 0.9rem; color: var(--text-2);">Junte-se à CoreVault e monte seu setup</p>
+      </div>
+
+      <div style="display: flex; flex-direction: column; gap: 1.1rem;">
+
+        <!-- Nome completo -->
+        <div style="display: flex; flex-direction: column; gap: 6px;">
+          <label style="font-size: 13px; font-weight: 500; color: var(--text-2);">Nome completo</label>
+          <input id="reg-name" type="text" placeholder="João da Silva"
+            style="padding: 10px 14px; border: 1px solid var(--border); border-radius: var(--radius-md); font-family: inherit; font-size: 14px; background: var(--bg); color: var(--text); outline: none; transition: border-color 0.2s;"
+            onfocus="this.style.borderColor='var(--border-strong)'" onblur="this.style.borderColor='var(--border)'">
+        </div>
+
+        <!-- E-mail -->
+        <div style="display: flex; flex-direction: column; gap: 6px;">
+          <label style="font-size: 13px; font-weight: 500; color: var(--text-2);">E-mail</label>
+          <input id="reg-email" type="email" placeholder="seu@email.com"
+            style="padding: 10px 14px; border: 1px solid var(--border); border-radius: var(--radius-md); font-family: inherit; font-size: 14px; background: var(--bg); color: var(--text); outline: none; transition: border-color 0.2s;"
+            onfocus="this.style.borderColor='var(--border-strong)'" onblur="this.style.borderColor='var(--border)'">
+        </div>
+
+        <!-- Senha -->
+        <div style="display: flex; flex-direction: column; gap: 6px;">
+          <label style="font-size: 13px; font-weight: 500; color: var(--text-2);">Senha</label>
+          <div style="position: relative;">
+            <input id="reg-password" type="password" placeholder="Mínimo 8 caracteres"
+              style="padding: 10px 42px 10px 14px; border: 1px solid var(--border); border-radius: var(--radius-md); font-family: inherit; font-size: 14px; background: var(--bg); color: var(--text); outline: none; transition: border-color 0.2s; width: 100%;"
+              onfocus="this.style.borderColor='var(--border-strong)'" onblur="this.style.borderColor='var(--border)'"
+              oninput="checkPasswordStrength(this.value)">
+            <button type="button" onclick="toggleVisibility('reg-password', this)"
+              style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); background: none; border: none; cursor: pointer; color: var(--text-3); display: flex; align-items: center; padding: 4px;">
+              <svg id="eye-icon-password" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+            </button>
+          </div>
+          <!-- Barra de força da senha -->
+          <div id="strength-bar-wrap" style="display: none; flex-direction: column; gap: 4px; margin-top: 2px;">
+            <div style="display: flex; gap: 4px;">
+              <div id="s1" style="height: 3px; flex: 1; border-radius: 99px; background: var(--border); transition: background 0.3s;"></div>
+              <div id="s2" style="height: 3px; flex: 1; border-radius: 99px; background: var(--border); transition: background 0.3s;"></div>
+              <div id="s3" style="height: 3px; flex: 1; border-radius: 99px; background: var(--border); transition: background 0.3s;"></div>
+              <div id="s4" style="height: 3px; flex: 1; border-radius: 99px; background: var(--border); transition: background 0.3s;"></div>
+            </div>
+            <span id="strength-label" style="font-size: 12px; color: var(--text-3);"></span>
+          </div>
+        </div>
+
+        <!-- Confirmar senha -->
+        <div style="display: flex; flex-direction: column; gap: 6px;">
+          <label style="font-size: 13px; font-weight: 500; color: var(--text-2);">Confirmar senha</label>
+          <div style="position: relative;">
+            <input id="reg-confirm" type="password" placeholder="Repita a senha"
+              style="padding: 10px 42px 10px 14px; border: 1px solid var(--border); border-radius: var(--radius-md); font-family: inherit; font-size: 14px; background: var(--bg); color: var(--text); outline: none; transition: border-color 0.2s; width: 100%;"
+              onfocus="this.style.borderColor='var(--border-strong)'" onblur="this.style.borderColor='var(--border)'">
+            <button type="button" onclick="toggleVisibility('reg-confirm', this)"
+              style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); background: none; border: none; cursor: pointer; color: var(--text-3); display: flex; align-items: center; padding: 4px;">
+              <svg id="eye-icon-confirm" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- Termos -->
+        <label style=" align-items: flex-start; gap: 10px; cursor: pointer; font-size: 13px; color: var(--text-2); line-height: 1.5;">
+          <input id="reg-terms" type="checkbox" style="margin-top: 2px; accent-color: var(--accent); width: 15px; height: 15px; flex-shrink: 0; cursor: pointer;">
+          Eu concordo com os
+          <a href="#" style="color: var(--text); font-weight: 500; border-bottom: 1px solid var(--border-strong); white-space: nowrap;">Termos de Uso</a>
+          &nbsp;e a&nbsp;
+          <a href="#" style="color: var(--text); font-weight: 500; border-bottom: 1px solid var(--border-strong); white-space: nowrap;">Política de Privacidade</a>
+        </label>
+
+        <!-- Mensagem de erro -->
+        <div id="error-msg" style="display: none; background: var(--red-light); border: 1px solid #fca5a5; border-radius: var(--radius-md); padding: 10px 14px; font-size: 13px; color: var(--red);"></div>
+
+        <!-- Botão -->
+        <button class="btn-primary" style="justify-content: center; width: 100%; margin-top: 0.25rem;" onclick="criarConta()">
+          Criar conta
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </button>
+
+        <p style="text-align: center; font-size: 13px; color: var(--text-2);">
+          Já tem conta? <a href="login.html" style="color: var(--text); font-weight: 500; border-bottom: 1px solid var(--border-strong);">Entrar</a>
+        </p>
+
+      </div>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="footer-bottom">
+      <span>&copy; 2026 CoreVault. Todos os direitos reservados.</span>
+    </div>
+  </footer>
+
+  <script>
+    // Redireciona se já estiver logado
+    (function() {
+      try {
+        const user = JSON.parse(localStorage.getItem('corevault_user'));
+        if (user) window.location.replace('index.html');
+      } catch(e) {}
+    })();
+
+    function toggleVisibility(inputId, btn) {
+      const input = document.getElementById(inputId);
+      const isPassword = input.type === 'password';
+      input.type = isPassword ? 'text' : 'password';
+      btn.innerHTML = isPassword
+        ? `<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94"/><path d="M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19"/><line x1="1" y1="1" x2="23" y2="23"/></svg>`
+        : `<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>`;
+    }
+
+    function checkPasswordStrength(val) {
+      const wrap = document.getElementById('strength-bar-wrap');
+      const label = document.getElementById('strength-label');
+      const bars = [document.getElementById('s1'), document.getElementById('s2'), document.getElementById('s3'), document.getElementById('s4')];
+
+      if (!val) { wrap.style.display = 'none'; return; }
+      wrap.style.display = 'flex';
+
+      let score = 0;
+      if (val.length >= 8) score++;
+      if (/[A-Z]/.test(val)) score++;
+      if (/[0-9]/.test(val)) score++;
+      if (/[^A-Za-z0-9]/.test(val)) score++;
+
+      const colors = ['#dc2626', '#d97706', '#2563eb', '#16a34a'];
+      const labels = ['Muito fraca', 'Fraca', 'Boa', 'Forte'];
+
+      bars.forEach((b, i) => {
+        b.style.background = i < score ? colors[score - 1] : 'var(--border)';
+      });
+      label.textContent = labels[score - 1] || '';
+      label.style.color = score > 0 ? colors[score - 1] : 'var(--text-3)';
+    }
+
+    function showError(msg) {
+      const el = document.getElementById('error-msg');
+      el.textContent = msg;
+      el.style.display = 'block';
+    }
+
+    function hideError() {
+      document.getElementById('error-msg').style.display = 'none';
+    }
+
+    function criarConta() {
+      hideError();
+
+      const nome = document.getElementById('reg-name').value.trim();
+      const email = document.getElementById('reg-email').value.trim();
+      const senha = document.getElementById('reg-password').value;
+      const confirma = document.getElementById('reg-confirm').value;
+      const termos = document.getElementById('reg-terms').checked;
+
+      if (!nome || !email || !senha || !confirma) {
+        showError('Por favor, preencha todos os campos.');
+        return;
+      }
+
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailRegex.test(email)) {
+        showError('Insira um endereço de e-mail válido.');
+        return;
+      }
+
+      if (senha.length < 8) {
+        showError('A senha deve ter pelo menos 8 caracteres.');
+        return;
+      }
+
+      if (senha !== confirma) {
+        showError('As senhas não coincidem. Verifique e tente novamente.');
+        return;
+      }
+
+      if (!termos) {
+        showError('Você precisa aceitar os Termos de Uso para continuar.');
+        return;
+      }
+
+      // Salva o usuário na lista de cadastrados (simulação)
+      const user = { nome, email };
+      try {
+        const users = JSON.parse(localStorage.getItem('corevault_users') || '[]');
+        const exists = users.find(u => u.email === email);
+        if (!exists) {
+          users.push(user);
+          localStorage.setItem('corevault_users', JSON.stringify(users));
+        }
+      } catch(e) {}
+
+      // Loga o usuário imediatamente após o cadastro
+      localStorage.setItem('corevault_user', JSON.stringify(user));
+      window.location.href = 'index.html';
+    }
+  </script>
+
+  <script src="auth.js"></script>
+</body>
+</html>

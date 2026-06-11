@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Entrar — CoreVault</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="logo">
+        <div class="logo-icon">
+          <svg viewBox="0 0 18 18" fill="none"><rect x="2" y="2" width="6" height="6" rx="1.5" fill="white"/><rect x="10" y="2" width="6" height="6" rx="1.5" fill="white" opacity="0.6"/><rect x="2" y="10" width="6" height="6" rx="1.5" fill="white" opacity="0.6"/><rect x="10" y="10" width="6" height="6" rx="1.5" fill="white" opacity="0.3"/></svg>
+        </div>
+        CoreVault
+      </a>
+      <button class="hamburger-btn" id="hamburger-btn" aria-label="Abrir menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="site-nav">
+        <a href="index.html">Início</a>
+        <a href="processadores.html">Processadores</a>
+        <a href="placa-video.html">Placas de Vídeo</a>
+        <a href="memoria-ram.html">Memória RAM</a>
+      </nav>
+      <div class="header-actions">
+        <a href="login.html" class="login-btn active">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          Entrar
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <div style="min-height: calc(100vh - 64px - 100px); display: flex; align-items: center; justify-content: center; padding: 3rem 1rem;">
+    <div style="background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-xl); padding: 2.5rem; width: 100%; max-width: 400px; box-shadow: var(--shadow-md);">
+
+      <div style="text-align: center; margin-bottom: 2rem;">
+        <div class="logo-icon" style="margin: 0 auto 1rem; width: 48px; height: 48px;">
+          <svg viewBox="0 0 18 18" fill="none"><rect x="2" y="2" width="6" height="6" rx="1.5" fill="white"/><rect x="10" y="2" width="6" height="6" rx="1.5" fill="white" opacity="0.6"/><rect x="2" y="10" width="6" height="6" rx="1.5" fill="white" opacity="0.6"/><rect x="10" y="10" width="6" height="6" rx="1.5" fill="white" opacity="0.3"/></svg>
+        </div>
+        <h1 style="font-size: 1.5rem; font-weight: 600; letter-spacing: -0.02em; margin-bottom: 0.25rem;">Bem-vindo de volta</h1>
+        <p style="font-size: 0.9rem; color: var(--text-2);">Entre na sua conta CoreVault</p>
+      </div>
+
+      <div style="display: flex; flex-direction: column; gap: 1.25rem;">
+        <div style="display: flex; flex-direction: column; gap: 6px;">
+          <label style="font-size: 13px; font-weight: 500; color: var(--text-2);">E-mail</label>
+          <input id="login-email" type="email" placeholder="seu@email.com"
+            style="padding: 10px 14px; border: 1px solid var(--border); border-radius: var(--radius-md); font-family: inherit; font-size: 14px; background: var(--bg); color: var(--text); outline: none; transition: border-color 0.2s;"
+            onfocus="this.style.borderColor='var(--border-strong)'" onblur="this.style.borderColor='var(--border)'">
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 6px;">
+          <label style="font-size: 13px; font-weight: 500; color: var(--text-2);">Senha</label>
+          <input id="login-password" type="password" placeholder="••••••••"
+            style="padding: 10px 14px; border: 1px solid var(--border); border-radius: var(--radius-md); font-family: inherit; font-size: 14px; background: var(--bg); color: var(--text); outline: none; transition: border-color 0.2s;"
+            onfocus="this.style.borderColor='var(--border-strong)'" onblur="this.style.borderColor='var(--border)'">
+        </div>
+        <div id="login-error" style="display:none; background: var(--red-light); border: 1px solid #fca5a5; border-radius: var(--radius-md); padding: 10px 14px; font-size: 13px; color: var(--red);"></div>
+        <button class="btn-primary" style="justify-content: center; width: 100%;" onclick="fazerLogin()">
+          Entrar
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </button>
+        <p style="text-align: center; font-size: 13px; color: var(--text-2);">
+          Não tem conta? <a href="cadastro.html" style="color: var(--text); font-weight: 500; border-bottom: 1px solid var(--border-strong);">Criar conta</a>
+        </p>
+      </div>
+
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="footer-bottom">
+      <span>&copy; 2026 CoreVault. Todos os direitos reservados.</span>
+    </div>
+  </footer>
+
+  <script>
+    // Redireciona se já estiver logado
+    (function() {
+      try {
+        const user = JSON.parse(localStorage.getItem('corevault_user'));
+        if (user) window.location.replace('index.html');
+      } catch(e) {}
+    })();
+
+    function fazerLogin() {
+      const email = document.getElementById('login-email').value.trim();
+      const senha = document.getElementById('login-password').value.trim();
+
+      const errorEl = document.getElementById('login-error');
+      errorEl.style.display = 'none';
+
+      if (!email || !senha) {
+        errorEl.textContent = 'Por favor, preencha todos os campos.';
+        errorEl.style.display = 'block';
+        return;
+      }
+
+      // Simula login: aceita qualquer e-mail/senha válidos
+      // (em produção, isso seria validado no backend)
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailRegex.test(email)) {
+        errorEl.textContent = 'Insira um e-mail válido.';
+        errorEl.style.display = 'block';
+        return;
+      }
+
+      // Salva sessão: tenta recuperar cadastro existente, senão cria entrada genérica
+      let existingUser = null;
+      try {
+        const all = JSON.parse(localStorage.getItem('corevault_users') || '[]');
+        existingUser = all.find(u => u.email === email);
+      } catch(e) {}
+
+      const user = existingUser || { nome: email.split('@')[0], email };
+      localStorage.setItem('corevault_user', JSON.stringify(user));
+      window.location.href = 'index.html';
+    }
+
+    // Permite login com Enter
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Enter') fazerLogin();
+    });
+  </script>
+  <script src="auth.js"></script>
+</body>
+</html>
